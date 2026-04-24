@@ -3,44 +3,42 @@ package com.apps.quantitymeasurement;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.apps.quantitymeasurement.QuantityMeasurementApp.Feet;
-
 public class QuantityMeasurementAppTest {
 
     @Test
     public void testFeetEquality_SameValue() {
-        Feet f1 = new Feet(1.0);
-        Feet f2 = new Feet(1.0);
+        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
+        Length l2 = new Length(1.0, Length.LengthUnit.FEET);
 
-        assertTrue(f1.equals(f2));
+        assertTrue(l1.equals(l2));
     }
 
     @Test
     public void testFeetEquality_DifferentValue() {
-        Feet f1 = new Feet(1.0);
-        Feet f2 = new Feet(2.0);
+        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
+        Length l2 = new Length(2.0, Length.LengthUnit.FEET);
 
-        assertFalse(f1.equals(f2));
+        assertFalse(l1.equals(l2));
     }
 
     @Test
     public void testFeetEquality_NullComparison() {
-        Feet f1 = new Feet(1.0);
+        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
 
-        assertFalse(f1.equals(null));
+        assertFalse(l1.equals(null));
     }
 
     @Test
     public void testFeetEquality_DifferentClass() {
-        Feet f1 = new Feet(1.0);
+        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
 
-        assertFalse(f1.equals("Some String"));
+        assertFalse(l1.equals("Some String"));
     }
 
     @Test
     public void testFeetEquality_SameReference() {
-        Feet f1 = new Feet(1.0);
+        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
 
-        assertTrue(f1.equals(f1));
+        assertTrue(l1.equals(l1));
     }
 }
