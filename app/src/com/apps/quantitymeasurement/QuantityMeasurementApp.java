@@ -2,6 +2,7 @@ package com.apps.quantitymeasurement;
 
 public class QuantityMeasurementApp {
 
+<<<<<<< Updated upstream
     // Inner class to represent Feet measurement
     public static class Feet {
         private final double value;
@@ -45,5 +46,22 @@ public class QuantityMeasurementApp {
 
         System.out.println("Input: 1.0 ft and 1.0 ft");
         System.out.println("Output: Equal (" + f1.equals(f2) + ")");
+=======
+    public static void main(String[] args) {
+
+        // ===== Cross-unit comparison =====
+        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
+        Length l2 = new Length(12.0, Length.LengthUnit.INCHES);
+
+        System.out.println("Input: Quantity(1.0, \"feet\") and Quantity(12.0, \"inches\")");
+        System.out.println("Output: Equal (" + l1.equals(l2) + ")");
+
+        // ===== Same unit comparison =====
+        Length l3 = new Length(1.0, Length.LengthUnit.INCHES);
+        Length l4 = new Length(1.0, Length.LengthUnit.INCHES);
+
+        System.out.println("Input: Quantity(1.0, \"inch\") and Quantity(1.0, \"inch\")");
+        System.out.println("Output: Equal (" + l3.equals(l4) + ")");
+>>>>>>> Stashed changes
     }
 }
